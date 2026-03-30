@@ -41,12 +41,13 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+      // UI Tests
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+  /*  {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -54,6 +55,14 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+    },*/
+     // API Tests — no browser
+    {
+      name: 'api',
+      testDir: './tests/api',
+      use: {
+        baseURL: process.env.API_BASE_URL || 'https://reqres.in/api',
+      },
     },
 
     /* Test against mobile viewports. */

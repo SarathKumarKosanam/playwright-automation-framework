@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../src/pages/LoginPage';
-import { InventoryPage } from '../src/pages/InventoryPage';
-import { CartPage } from '../src/pages/CartPage';
-import { CheckoutPage } from '../src/pages/CheckoutPage';
+import { LoginPage } from '../../src/pages/LoginPage';
+import { InventoryPage } from '../../src/pages/InventoryPage';
+import { CartPage } from '../../src/pages/CartPage';
+import { CheckoutPage } from '../../src/pages/CheckoutPage';
 
 test.describe('Checkout', () => {
   let inventoryPage: InventoryPage;
